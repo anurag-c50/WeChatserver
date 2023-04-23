@@ -72,7 +72,7 @@ module.exports.forget = async(req,res,next)=>{
         from: "youremail@gmail.com",
         to: email,
         subject:"Sending Email For password Rest",
-        text:`This Link Valid For 2 MINUTES https://wechatservers.onrender.com/resetpassword/${useremail.id}/${setusertoken.verifytoken}`
+        text:`This Link Valid For 2 MINUTES https://wechatv3.netlify.app/resetpassword/${useremail.id}/${setusertoken.verifytoken}`
     };
    }
     transporter.sendMail(mailOptions, function(error, info){
