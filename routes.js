@@ -1,0 +1,17 @@
+const {getUser,register,login, forget,reset, setpassword, setAvatar,searchUser,conversation,conversationget,conversationdelete,messageadd,messageget,profileUpdate}  = require('./controller');
+const router = require('express').Router();
+router.post("/getUser",getUser);
+router.post("/register",register);
+router.post("/login",login);
+router.post("/forget",forget);
+router.get("/resetpassword/:id/:token",reset);
+router.post("/:id/:token",setpassword);
+router.post("/setavatar",setAvatar);
+router.post("/searchUser",searchUser);
+router.post("/conversation",conversation);
+router.post("/conversationget",conversationget);
+router.post("/conversationdelete",conversationdelete);
+router.post("/messageadd",messageadd);
+router.post("/messageget",messageget);
+router.post("/profileUpdate",profileUpdate);
+module.exports = router;
